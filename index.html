@@ -129,6 +129,19 @@
         font-weight: 800;
         font-display: swap;
       }
+
+      @font-face {
+        font-family: "JalpulrineunHaruche";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Haru.woff")
+          format("woff");
+        font-weight: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Linux Biolinum";
+        src: url("/font/LinBiolinum_R.ttf") format("ttf");
+      }
     </style>
   </head>
 
@@ -170,8 +183,30 @@
               </p>
             </div>
           </div>
-          <div class="swiper-slide slide_2"></div>
-          <div class="swiper-slide slide_3"></div>
+          <div class="swiper-slide slide_2">
+            <div class="txt_box">
+              <h3>Re:Earth</h3>
+              <p>
+                We rethink, reduce, and return our
+                <br />
+                gratitude to the planet that sustains us.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide slide_3">
+            <div class="txt_box">
+              <h3>
+                From Nature,
+                <br />
+                With Love
+              </h3>
+              <p>
+                Gentle care that starts
+                <br />
+                from the earth and embraces your natural beauty.
+              </p>
+            </div>
+          </div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -196,7 +231,82 @@
       </div>
     </section>
 
-    <section class="sec_4"></section>
+    <section class="sec_4">
+      <div class="con">
+        <div class="brand_service_box service_1">
+          <div class="number img_box">
+            <img src="/Greendays_main_imgs/sec_4_num-1.png" alt="" />
+          </div>
+          <div class="txt_box">
+            <span>Eco-friendly raw materials</span>
+            <div>
+              <h3>친환경 원료</h3>
+              <h5>로 제품 생산</h5>
+            </div>
+            <p>
+              자연에서 얻은 순한 원료로 건강한 제품을 만들어
+              <br />
+              모두가 안심하고 사용할 수 있는 제품을 만들어갑니다.
+            </p>
+          </div>
+        </div>
+        <div class="brand_service_box service_2">
+          <div class="number img_box">
+            <img src="/Greendays_main_imgs/sec_4_num-2.png" alt="" />
+          </div>
+          <div class="txt_box">
+            <span>production & return</span>
+            <div>
+              <h3>재사용 용기</h3>
+              <h5>로 제품 생산 +</h5>
+              <h3>용기수거</h3>
+            </div>
+            <p>
+              재사용 가능한 용기로 제품을 생산합니다.
+              <br />
+              사용 후에는 회수하여 세척해 다시 순환의 가치를 이어갑니다.
+            </p>
+          </div>
+        </div>
+        <div class="brand_service_box service_3">
+          <div class="number img_box">
+            <img src="/Greendays_main_imgs/sec_4_num-3.png" alt="" />
+          </div>
+          <div class="txt_box">
+            <span>Refill & Reuse</span>
+            <div>
+              <h3>리필 패키지</h3>
+              <h5>판매</h5>
+            </div>
+            <p>
+              기존 용기를 재사용할 수 있도록 도와주며, 불필요한 폐기물을
+              <br />
+              줄이는데 기여합니다. 작은 습관이 모여 더 큰 변화를 만듭니다.
+            </p>
+          </div>
+        </div>
+        <div class="brand_service_box service_4">
+          <div class="number img_box">
+            <img src="/Greendays_main_imgs/sec_4_num-4.png" alt="" />
+          </div>
+          <div class="txt_box">
+            <span>Subscription delivery</span>
+            <div>
+              <h3>일반배송</h3>
+              <h5>&</h5>
+              <h3>정기배송</h3>
+            </div>
+            <p>
+              편리한 정기 배송과 회수 시스템으로
+              <br />
+              제로 웨이스트를 일상에 스며들게 하며,
+              <br />
+              지속 가능성과 편리함, 두 가지를 모두 책임지겠습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="sec_5">
       <div class="img_box">
@@ -311,6 +421,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="ele img_box">
+        <img src="/Greendays_main_imgs/sec_7_element.png" alt="" />
       </div>
     </section>
 
@@ -427,7 +540,7 @@
       header .menu_box > ul {
         width: 850px;
         font-size: 22px;
-        color: #fff;
+        color: rgba(255, 255, 255, 0.7);
         height: 100%;
         display: flex;
         justify-content: space-between;
@@ -438,6 +551,10 @@
         height: 100%;
         display: flex;
         align-items: center;
+      }
+
+      header .menu_box > ul > li:hover {
+        color: #fff;
       }
 
       header .con .menu_icon_box .img_box img {
@@ -468,7 +585,8 @@
       }
 
       .sec_1 .swiper .slide_3 {
-        background-color: rgb(255, 212, 219);
+        background: url(/Greendays_main_imgs/sec_1_banner-3.jpg) no-repeat
+          center / cover;
       }
 
       /* 슬라이드-공통속성 */
@@ -491,6 +609,24 @@
         color: #fff;
         margin-right: 120px;
         margin-top: 280px;
+      }
+
+      .sec_1 .swiper .slide_2 .txt_box {
+        color: #fff;
+        margin-left: 120px;
+        margin-top: 320px;
+      }
+
+      .sec_1 .swiper .slide_3 .txt_box {
+        text-align: right;
+        color: #fff1e0;
+        margin-right: 120px;
+        margin-top: 280px;
+      }
+
+      .sec_1 .swiper .swiper-button-next,
+      .sec_1 .swiper .swiper-button-prev {
+        color: rgb(255, 243, 216);
       }
 
       /* 배너 하단 이미지 */
@@ -542,6 +678,66 @@
           cover;
       }
 
+      /* 브랜드 소개 텍스트 공통 설정 */
+
+      .sec_4 .brand_service_box {
+        display: flex;
+        align-items: center;
+        border: solid 1px red;
+      }
+
+      .sec_4 .brand_service_box:nth-child(2n) {
+        justify-content: flex-end;
+        text-align: right;
+       border :solid 1px blue; 
+      }
+
+      .sec_4 .brand_service_box .number {
+        width : 45px;
+        margin-right: 10px;
+        margin-top: -30px;
+      }
+
+      .sec_4 .brand_service_box:nth-child(4) .number {
+        margin-top: -50px;
+      }
+
+      .sec_4 .brand_service_box .txt_box span {
+        font-family: "Linux Biolinum";
+        font-size: 24px;
+        color: #20522a;
+      }
+
+      .sec_4 .brand_service_box .txt_box div {
+        font-family: "JalpulrineunHaruche";
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      .sec_4 .brand_service_box .txt_box div h3 {
+        color: #573b14;
+        font-size: 50px;
+      }
+
+      .sec_4 .brand_service_box .txt_box div h5 {
+        color: #535353;
+        font-size: 32px;
+        margin-top: 10px;
+      }
+
+      .sec_4 .brand_service_box .txt_box p {
+        font-family: "GyeonggiMillenniumTitle";
+        font-size: 20px;
+        font-weight: 300;
+        color: #656060;
+        letter-spacing: -1.1px;;
+      }
+
+      /* 브랜드 소개 텍스트 개별 설정 */
+
+
       /* 섹션4 끝 */
 
       /* 섹션5 시작 */
@@ -571,6 +767,7 @@
         /* height: 1470px; */
         background: url(/Greendays_main_imgs/sec_7_BG.png) no-repeat center /
           cover;
+        position: relative;
       }
 
       /* 텍스트 박스(왼쪽) */
@@ -726,6 +923,7 @@
         color: #bab6b6;
         display: flex;
         justify-content: flex-start;
+        align-items: center;
       }
 
       .sec_7 .review_box .review .review_txt_box .personal_box .name {
@@ -781,6 +979,13 @@
       .sec_7 .review_box .review:hover a {
         visibility: visible;
         opacity: 1;
+      }
+
+      .sec_7 .ele {
+        position: absolute;
+        width: 550px;
+        left: -20px;
+        bottom: 100px;
       }
 
       /* 섹션7 끝 */
