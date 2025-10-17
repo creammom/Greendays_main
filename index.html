@@ -29,6 +29,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Baloo+2:wght@400..800&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Caveat:wght@400..700&family=Itim&family=Marck+Script&display=swap"
       rel="stylesheet"
     />
@@ -318,7 +322,7 @@
       <div class="con">
         <div class="txt_box">
           <h2>
-            Our Daily, 
+            Our Daily,
             <br />
             Your Pure Review
           </h2>
@@ -468,6 +472,66 @@
         <div class="swiper-pagination"></div>
       </div>
     </section>
+
+    <footer class="con-min-width">
+      <div class="con">
+        <div class="main_box">
+          <div class="CC_box">
+            <p>Customer Center</p>
+            <p>1600-0000</p>
+            <p>Mon-Fri 10:00 - 18:00</p>
+          </div>
+
+          <div class="menu_box">
+            <div class="line"></div>
+            <ul>
+              <li>
+                <a href="#">Products</a>
+                <ul>
+                  <li><a href="#">전체상품</a></li>
+                  <li><a href="#">베스트 상품</a></li>
+                  <li><a href="#">정기구독</a></li>
+                  <li><a href="#">제품리뷰</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Service</a>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">자주 묻는 질문</a></li>
+                  <li><a href="#">상품문의</a></li>
+                  <li><a href="#">상품후기</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">My Greendays</a>
+                <ul>
+                  <li><a href="#">회원가입</a></li>
+                  <li><a href="#">로그인</a></li>
+                  <li><a href="#">마이페이지</a></li>
+                  <li><a href="#">주문조회</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Social</a>
+                <ul>
+                  <li><a href="#">인스타그램</a></li>
+                  <li><a href="#">유튜브</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="logo_box">
+          <h3>GREENDAYS</h3>
+        </div>
+      </div>
+
+      <div class="img_box">
+        <img src="/Greendays_main_imgs/ft_rotate.png" alt="" />
+      </div>
+    </footer>
 
     <style>
       /* 노말라이즈 */
@@ -1073,6 +1137,161 @@
       }
 
       /* 섹션9 끝 */
+
+      /* 푸터 시작 */
+      footer {
+        width: 100%;
+        height: 732px;
+        background-color: #fff;
+        color: #1a5b47;
+        font-family: "Pretendard";
+        font-weight: 400;
+        position: relative;
+        transition: background-color 0.8s ease, scale 0.8s 3s ease;
+        padding-top: 60px;
+        overflow: hidden;
+      }
+
+      /* 푸터 active */
+      footer.active {
+        background-color: #efebe2;
+        transition-delay: 0.5s;
+      }
+
+      /* footer .con {
+        height: auto;
+        overflow: hidden;
+      } */
+
+      /* 푸터-메인 */
+
+      /* 푸터-메인-CC */
+
+      footer .main_box {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      footer .main_box .CC_box,
+      footer .menu_box {
+        display: inline-block;
+      }
+
+      footer .main_box .CC_box p {
+        margin: 0 0 5px 0;
+        padding: 0;
+      }
+
+      footer .main_box .CC_box p:first-child {
+        font-size: 25px;
+      }
+
+      footer .main_box .CC_box p:nth-child(2) {
+        font-size: 35px;
+      }
+
+      footer .main_box .CC_box p:last-child {
+        font-size: 15px;
+      }
+
+      /* 푸터-메인-1차메뉴 */
+
+      footer .main_box .menu_box {
+        padding-right: 0;
+        position: relative;
+        letter-spacing: -2.5%;
+      }
+
+      footer .main_box .menu_box .line {
+        width: 765px;
+        height: 1px;
+        background-color: #afc0b4;
+        position: absolute;
+        top: 40px;
+      }
+
+      footer .main_box .menu_box ul {
+        display: flex;
+      }
+
+      footer .main_box .menu_box ul li a {
+        font-size: 24px;
+        font-weight: 700;
+        padding-right: 90px;
+      }
+
+      footer .main_box .menu_box ul li:last-child a {
+        padding-right: 70px;
+      }
+
+      /* 푸터-메인-2차메뉴 */
+
+      footer .main_box .menu_box ul ul {
+        display: block;
+        margin-top: 10px;
+      }
+
+      footer .main_box .menu_box ul ul li a {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 55px;
+      }
+
+      footer .main_box .menu_box .line,
+      footer .main_box .menu_box ul ul {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.8s, visibility 0.8s ease;
+        transition-delay: 0s;
+      }
+
+      /* 2초 뒤 2차메뉴 등장 */
+      footer.active .main_box .menu_box .line,
+      footer.active .main_box .menu_box ul ul {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 1.5s;
+      }
+
+      /* 푸터-로고 */
+
+      footer .logo_box {
+        margin-top: 10px;
+        font-family: "Baloo 2", sans-serif;
+        padding: 0;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      footer .logo_box h3 {
+        font-size: 300px;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 푸터-이미지 */
+
+      footer .img_box {
+        position: absolute;
+        top: 285px;
+        left: 54px;
+      }
+
+      /* 이미지 초기 상태 */
+      footer .img_box img {
+        width: 141px;
+        transform: translate(0, 0) scale(1);
+        transition: transform 0.8s ease;
+        transition-delay: 0s;
+      }
+
+      /* 1초 뒤 이미지 확장 */
+      footer.active .img_box img {
+        transform: translate(180px, 230px) scale(5.5);
+        transition-delay: 1s;
+      }
+
+      /* 푸터 끝 */
     </style>
 
     <script>
@@ -1120,6 +1339,23 @@
       });
 
       // 섹션9-스와이퍼 끝
+
+      // 푸터 시작
+
+      $(window).on("scroll", function () {
+        const footer = $("footer");
+        const scrollY = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        const footerTop = footer.offset().top;
+
+        if (scrollY + windowHeight >= footerTop + 100) {
+          footer.addClass("active");
+        } else {
+          footer.removeClass("active");
+        }
+      });
+
+      // 푸터 끝
     </script>
   </body>
 </html>
