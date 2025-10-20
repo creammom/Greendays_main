@@ -159,7 +159,7 @@
   </head>
 
   <body>
-    <header>
+    <header id="header">
       <div class="con">
         <div class="logo_wrap">
           <a href="#" class="img_box">
@@ -237,8 +237,6 @@
         <img src="/Greendays_main_imgs/sec1_banner_bottom.png" alt="" />
       </div>
     </section>
-
-
 
     <section class="sec_3">
       <div class="img_box">
@@ -581,9 +579,10 @@
 
       header {
         font-family: "Baloo 2", sans-serif;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
+        right: 0;
         z-index: 100;
         width: 100%;
         height: 90px;
@@ -1308,10 +1307,54 @@
     </style>
 
     <script>
+      // 헤더 스크롤 설정 시작
+
+      const header = document.getElementById("header");
+
+      let lastScrollY = window.scrollY;
+      let ticking = false;
+      let isHidden = false;
+
+      function onScroll() {
+        const currentScrollY = window.scrollY;
+
+        if (Math.abs(currentScrollY - lastScrollY) < 5) {
+          // 너무 미세한 움직임은 무시
+          ticking = false;
+          return;
+        }
+
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          // 아래로 스크롤 + 일정 이상 내려갔을 때
+          if (!isHidden) {
+            header.style.transform = "translateY(-100%)";
+            isHidden = true;
+          }
+        } else {
+          // 위로 스크롤
+          if (isHidden) {
+            header.style.transform = "translateY(0)";
+            isHidden = false;
+          }
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+        }
+      });
+
+      // 헤더 스크롤 설정 끝
+
       // 섹션1-스와이퍼 시작
 
       var swiper1 = new Swiper(".mySwiper_1", {
-        spaceBetween: 30,
+        spaceBetween: 0,
         centeredSlides: true,
         autoplay: {
           delay: 4000,
