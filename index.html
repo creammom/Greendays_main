@@ -21,6 +21,15 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <!-- ScrollTrigger -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <!-- full page css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css"
+    />
+    <!-- full page js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script> -->
+    <!-- full page scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/vendors/scrolloverflow.min.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -228,6 +237,8 @@
         <img src="/Greendays_main_imgs/sec1_banner_bottom.png" alt="" />
       </div>
     </section>
+
+
 
     <section class="sec_3">
       <div class="img_box">
@@ -478,7 +489,7 @@
         <div class="main_box">
           <div class="CC_box">
             <p>Customer Center</p>
-            <p>1600-0000</p>
+            <p>1600-3908</p>
             <p>Mon-Fri 10:00 - 18:00</p>
           </div>
 
@@ -549,6 +560,7 @@
       }
 
       /* 라이브러리 */
+
       .con {
         width: 1680px;
         margin: 0 auto;
@@ -577,10 +589,6 @@
         height: 90px;
         transition: backdrop-filter 0.3s;
       }
-
-      /* header.active {
-        backdrop-filter: blur(10px);
-      } */
 
       header:hover {
         backdrop-filter: blur(10px);
@@ -729,6 +737,10 @@
       }
 
       /* 섹션1 끝 */
+
+      /* 섹션2 시작 */
+
+      /* 섹션2 끝 */
 
       /* 섹션3 시작 */
 
@@ -1188,6 +1200,7 @@
 
       footer .main_box .CC_box p:nth-child(2) {
         font-size: 35px;
+        font-weight: bold;
       }
 
       footer .main_box .CC_box p:last-child {
@@ -1295,19 +1308,6 @@
     </style>
 
     <script>
-      // 헤더 BG효과 시작
-
-      // $("header .menu_box li, header .logo_wrap, header .menu_icon_box").hover(
-      //   function () {
-      //     $("header").addClass("active");
-      //   },
-      //   function () {
-      //     $("header").removeClass("active");
-      //   }
-      // );
-
-      // 헤더 BG효과 끝
-
       // 섹션1-스와이퍼 시작
 
       var swiper1 = new Swiper(".mySwiper_1", {
@@ -1329,6 +1329,10 @@
       });
 
       // 섹션1-스와이퍼 끝
+
+      // 섹션2-풀페이지 시작
+
+      // 섹션2-풀페이지 끝
 
       // 섹션9-스와이퍼 시작
 
