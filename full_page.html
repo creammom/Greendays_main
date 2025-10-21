@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fullpage</title>
+  </head>
+  <body>
+    <section class="sec_1 page_group">
+      <div class="page page_1"></div>
+      <div class="page page_2"></div>
+      <div class="page page_3"></div>
+      <div class="page page_4"></div>
+    </section>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .page_group {
+        overflow-y: scroll;
+        height: 100vh;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+      }
+
+      .page_group > .page {
+        /*     min-height: 100vh; */
+        box-sizing: border-box;
+        scroll-snap-align: start;
+        height: 1080px;
+      }
+
+      .page_group > .page_1 {
+        background: url(https://raw.githubusercontent.com/moksunhee/Greendays_main/4c8963c7c76c00a2b9525f1f3001aac4293398e6/Greendays_main_img/2_natural.png)
+          center 0 / cover no-repeat;
+      }
+
+      .page_group > .page_2 {
+        background: url(https://raw.githubusercontent.com/moksunhee/Greendays_main/4c8963c7c76c00a2b9525f1f3001aac4293398e6/Greendays_main_img/2_cycle.png)
+          center 0 / cover no-repeat;
+      }
+
+      .page_group > .page_3 {
+        background: url(https://raw.githubusercontent.com/moksunhee/Greendays_main/4c8963c7c76c00a2b9525f1f3001aac4293398e6/Greendays_main_img/2_reuse.png)
+          center 0 / cover no-repeat;
+      }
+
+      .page_group > .page_4 {
+        background: url(https://raw.githubusercontent.com/moksunhee/Greendays_main/4c8963c7c76c00a2b9525f1f3001aac4293398e6/Greendays_main_img/2_organic.png)
+          center 0 / cover no-repeat;
+      }
+    </style>
+  </body>
+</html>

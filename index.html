@@ -441,6 +441,29 @@
       </div>
     </section>
 
+    <section class="sec_8">
+      <div class="panels">
+        <div class="panels__container">
+          <a href="#" class="panel panel_1">
+            <div class="panel__content">
+              <div class="panel__title panel__title_1">
+                <div class="arrow_line"></div>
+                <h3>Brand</h3>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="panel panel_2">
+            <div class="panel__content">
+              <div class="panel__title panel__title_2">
+                <h3>Shop</h3>
+                <div class="arrow_line"></div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="sec_9">
       <div class="ele img_box">
         <img src="/Greendays_main_imgs/sec_9_element.png" alt="" />
@@ -766,6 +789,19 @@
         text-align: right;
       }
 
+      .sec_4 .brand_service_box:nth-child(1) {
+        padding-top: 280px;
+      }
+      .sec_4 .brand_service_box:nth-child(2) {
+        margin-top: 380px;
+      }
+      .sec_4 .brand_service_box:nth-child(3) {
+        margin-top: 430px;
+      }
+      .sec_4 .brand_service_box:nth-child(4) {
+        margin-top: 450px;
+      }
+
       .sec_4 .brand_service_box .number {
         width: 45px;
         margin-right: 10px;
@@ -1063,6 +1099,235 @@
       }
 
       /* 섹션7 끝 */
+
+      /* 섹션8 시작 */
+
+      /* Layout */
+      .sec_8 {
+        background: url(/Greendays_main_imgs/sec_7_BG.png) no-repeat center /
+          cover;
+          background-size: 110%;
+      }
+
+      .panels {
+        width: 100%;
+        height: 950px;
+        overflow: hidden;
+          border-radius: 150px;
+      }
+
+      .panels__container {
+        /* border: solid 10px red; */
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        height: 100%;
+        width: 120%;
+        margin: 0 -10%;
+        visibility: hidden;
+      }
+
+      .panel {
+        display: inline-block;
+        height: 100%;
+        visibility: visible;
+        position: relative;
+        overflow: hidden;
+        flex: 1;
+        cursor: pointer;
+        text-decoration: none;
+        transform: translate3d(0, 0, 0);
+        transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1);
+      }
+
+      .panel_1 {
+        background: url(/Greendays_main_imgs/sec_8_forest.png);
+      }
+
+      .panel_2 {
+        background: url(/Greendays_main_imgs/sec_8_sign.png);
+      }
+
+      .panel__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: center center no-repeat;
+        background-size: cover;
+        transform: translateX(10%);
+        transition: transform 1s cubic-bezier(0.6, 0, 0.2, 1);
+        position: relative;
+      }
+
+      .panel:last-child .panel__content {
+        transform: translateX(-10%);
+      }
+
+      .panel__content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #000;
+        opacity: 0.5;
+        transition: opacity 1s cubic-bezier(0.6, 0, 0.2, 1);
+      }
+
+      /* Title */
+      .panel__title {
+        color: #fff;
+        z-index: 1;
+        transition: color 1s cubic-bezier(0.6, 0, 0.2, 1);
+        font-family: "Pretendard";
+        font-weight: bold;
+        font-size: 48px;
+        letter-spacing: 0.1em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .panel__title_1 {
+        margin-left: 200px;
+        margin-right: auto;
+      }
+
+      .panel__title_2 {
+        margin-left: auto;
+        margin-right: 200px;
+      }
+
+      .panel__title .arrow_line {
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        position: relative;
+        transition: width 1s cubic-bezier(0.6, 0, 0.2, 1);
+      }
+
+      .panel__title .arrow_line::before {
+        position: absolute;
+        left: 0;
+        top: -4.5px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(-135deg);
+      }
+
+      .panel__title_2 .arrow_line::before {
+        transform: rotate(45deg);
+        right: 0;
+        left: auto;
+      }
+
+      .panel:hover .panel__title .arrow_line {
+        width: 100px;
+      }
+
+      /* Hover States */
+      .panels:hover .panel {
+        transform: translate3d(-10%, 0, 0);
+      }
+
+      .panels:hover .panel .panel__content {
+        transform: translateX(14%);
+      }
+
+      .panels:hover .panel .panel__content::before {
+        opacity: 0.7;
+      }
+
+      .panels .panel:hover ~ .panel {
+        transform: translate3d(10%, 0, 0);
+      }
+
+      .panels .panel:hover ~ .panel .panel__content {
+        transform: translateX(-14%);
+      }
+
+      /* Active panel */
+      .panels .panel:hover {
+        z-index: 2;
+        transform: translate3d(10%, 0, 0);
+        pointer-events: auto;
+      }
+
+      .panels .panel:hover:last-child {
+        transform: translate3d(-10%, 0, 0);
+      }
+
+      .panels .panel:hover .panel__content {
+        transform: translateX(0%);
+      }
+
+      .panels .panel:hover .panel__content::before {
+        opacity: 0;
+      }
+
+      .panels .panel:hover .panel__title::before {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      /* Vertical layout */
+      .panels--stacked .panels__container {
+        width: 100%;
+        height: 120%;
+        margin: -10% 0;
+        flex-direction: column;
+      }
+
+      .panels--stacked .panel {
+        height: 50%;
+        width: 100%;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .panels--stacked .panel .panel__content {
+        transform: translate3d(0, 10%, 0);
+      }
+
+      .panels--stacked .panel:last-child .panel__content {
+        transform: translate3d(0, -10%, 0);
+      }
+
+      .panels--stacked:hover .panel {
+        transform: translate3d(0, -10%, 0);
+      }
+
+      .panels--stacked:hover .panel .panel__content {
+        transform: translate3d(0, 14%, 0);
+      }
+
+      .panels--stacked .panel:hover ~ .panel {
+        transform: translate3d(0, 10%, 0);
+      }
+
+      .panels--stacked .panel:hover ~ .panel .panel__content {
+        transform: translate3d(0, -14%, 0);
+      }
+
+      .panels--stacked .panel:hover {
+        transform: translate3d(0, 10%, 0);
+      }
+
+      .panels--stacked .panel:hover:last-child {
+        transform: translate3d(0, -10%, 0);
+      }
+
+      .panels--stacked .panel:hover .panel__content {
+        transform: translate3d(0, 0, 0);
+      }
+
+      /* 섹션8 끝 */
 
       /* 섹션9 시작 */
 
